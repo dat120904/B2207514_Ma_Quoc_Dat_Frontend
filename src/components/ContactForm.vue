@@ -1,5 +1,6 @@
 <template>
     <Form @submit="submitContact" :validation-schema="contactFormSchema">
+        <!-- <h4>Thêm Liên hệ</h4> -->
         <div class="form-group">
             <label for="name">Tên</label>
 
@@ -37,7 +38,9 @@
             </label>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Lưu</button>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Lưu
+            </button>
             <button v-if="contactLocal._id" type="button" class="ml-2 btn btn-danger"
 @click="deleteContact">
                 Xóa

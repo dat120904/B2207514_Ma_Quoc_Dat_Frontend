@@ -29,7 +29,10 @@
                 </button>
             </div>
         </div>
+
+
         <div class="mt-3 col-md-6">
+
             <div v-if="activeContact">
                 <h4>
                     Chi tiết Liên hệ
@@ -48,6 +51,9 @@
                 </router-link>
             </div>
         </div>
+
+        
+
     </div>
 </template>
 
@@ -62,6 +68,7 @@ export default {
         ContactCard,
         InputSearch,
         ContactList,
+    
     },
 // Đoạn mã xử lý đầy đủ sẽ trình bày bên dưới
     data() {
@@ -141,8 +148,10 @@ export default {
         // Chuyển hướng đến trang thêm liên hệ mới
         goToAddContact() {
             this.$router.push({ name: "contact.add" });
+        
         },
     },
+    
     mounted() {
         this.refreshList();
     },
